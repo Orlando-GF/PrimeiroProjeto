@@ -7,7 +7,7 @@ public class Exercicio {
     //Fazer condicao e validar se essa nota é maior ou iguAL A 7
     //IMPRIMIR SE FOR APROVADO OU NAO
     //MAIOR OU IGUAL A 5 ESTA DE RECUPERAÇAO
-    //MENOR QUE 5 ESTA REPROVADO
+    //MENOR QUE 5 ESTA REPROVADO.
 
     public static void main(String[] args) {
 
