@@ -6,15 +6,13 @@ import java.util.Scanner;
 
 public class Exercicio {
     public static void main(String[] args) {
-//         Ler no console no nome e sexo e salvar em uma colecao separado por G fem e masc
-//         dica - usar split pra usar array
         exercicioListas();
     }
 
     public static void exercicioListas() {
         Scanner s = new Scanner(System.in);
-        List<String> nomes  = new ArrayList<>();
-        List<String> sexos = new ArrayList<>();
+        List<String> nomesMasculinos  = new ArrayList<>();
+        List<String> nomesFemininos = new ArrayList<>();
 
         boolean continuar = true;
 
@@ -22,10 +20,17 @@ public class Exercicio {
             System.out.println("*** Exercicio modulo 11 ***");
             System.out.println("Digite o nome: ");
             String nome = s.next();
-            nomes.add(nome);
-            System.out.println("Digite seu sexo: ");
+            System.out.println("Digite o sexo (M/F): ");
             String sexo = s.next();
-            sexos.add(sexo);
+
+            if (sexo.equalsIgnoreCase("M")) {
+                nomesMasculinos.add(nome);
+            } else if (sexo.equalsIgnoreCase("F")) {
+                nomesFemininos.add(nome);
+            } else {
+                System.out.println("Sexo inválido. Digite M para masculino e F para feminino.");
+            }
+
             System.out.println("");
             System.out.println("Deseja continuar? S/N: ");
             String resposta = s.next();
@@ -35,9 +40,15 @@ public class Exercicio {
             }
         }
 
-        System.out.println("*** Lista com nome e sexo dos participantes ***");
-        for (int i = 0; i < nomes.size(); i++) {
-            System.out.println("Nome: " + nomes.get(i) + ", Sexo: " + sexos.get(i));
+        System.out.println("*** Lista com nomes masculinos. ***");
+        for (String nome : nomesMasculinos) {
+            System.out.println("Masculino:  " + nome);
+        }
+
+        System.out.println("");
+        System.out.println("*** Lista com nomes Femininos. ***");
+        for (String nome : nomesFemininos) {
+            System.out.println("Feminino:  " + nome);
         }
     }
 }
