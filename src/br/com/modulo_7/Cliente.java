@@ -1,4 +1,4 @@
-package br.com.orlando;
+package br.com.modulo_7;
 
 public class Cliente extends MercadoEbac {
 

@@ -1,4 +1,4 @@
-package br.com.orlando;
+package br.com.modulo_7;
 
 public abstract class MercadoEbac {
     public static void main(String[] args) {
